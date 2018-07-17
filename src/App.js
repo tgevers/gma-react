@@ -113,6 +113,7 @@ class App extends Component {
           />
           <Map
             ref={this.googleMap}
+            API="AIzaSyDkWej3V8WvSrTiKo41iu52wVV7sLZQXcU"
             zoom={10}
             lat={34.703585}
             lng={-86.593049}

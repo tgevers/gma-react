@@ -18,7 +18,8 @@ export default class Map extends Component {
         zoomControl: false
     }
     loadTheMap = () => {
-        let url = `https://maps.googleapis.com/maps/api/js?key=${this.props.API}&callback=initMap`; 
+        let url = 'https://maps.googleapis.com/maps/api/js?key=' + this.props.API + '&callback=initMap'
+        console.log(url)
         this.loadJS(url)
     }
     loadJS = (src) => {
