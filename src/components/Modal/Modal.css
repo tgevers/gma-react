@@ -1,0 +1,20 @@
+.modal {
+    position: relative;
+    top: -195px;
+    background: rgb(255, 255, 255);
+    height: 800px;
+    width: 800px;
+    box-shadow: 1px 1px 6px 3px #8080808a;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: darkgray;
+}

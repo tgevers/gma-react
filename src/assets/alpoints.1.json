@@ -1,0 +1,25 @@
+{
+    "points": [
+        {
+            "id": 1,
+            "lat": 34.703585,
+            "long": -86.593049,
+            "address": "3052 Leeman Ferry Road SW Huntsville, AL 35801",
+            "title": "Public Storage"
+        },
+        {
+            "id": 2,
+            "lat": 34.699445,
+            "long": -86.604697,
+            "address": "2902 Drake Ave SW Huntsville, AL 35805",
+            "title": "Public Storage"
+        },
+        {
+            "id": 3,
+            "lat": 34.748312,
+            "long": -86.671948,
+            "address": "1224 Old Monrovia Road Huntsville, AL 35806",
+            "title": "Public Storage"
+        }
+    ]
+}
