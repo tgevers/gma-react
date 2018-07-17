@@ -20,6 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.googleMap = React.createRef()
+    this.modal = React.createRef()
   }
   state = {
     showMap: false,
@@ -30,7 +31,7 @@ class App extends Component {
 
   }
   toggleModal = () => {
-    this.setState({showModal: !this.state.showModal})
+    this.modal.current.toggleModal()
   }
   loadMap = () => {
     let mapLoaded = this.state.loadMap
@@ -57,17 +58,6 @@ class App extends Component {
     console.log('go to Point', point);
     this.googleMap.current.panTo(point)
   }
-  toggleModal = () => {
-    let show = this.state.showModal
-    if (show) {
-      this.setState({ showModal: !show })
-      this.googleMap.current.setLeft('0')
-    } else {
-      this.setState({ showModal: !show })
-      this.googleMap.current.setLeft('28.5%')
-    }
-    console.log('toggleModal', this.state.showModal)
-  }
   toggleZoom = () => {
     this.googleMap.current.toggleZoom()
   }
@@ -78,7 +68,7 @@ class App extends Component {
           <img src={gmapLogo} className="App-logo" alt="Google Map Logo" />
           <h1 className="App-title">Google Maps & React</h1>
         </header>
-        <Modal show={this.state.showModal} toggle={this.toggleModal} />
+        <Modal ref={this.modal} show={true} toggle={this.toggleModal} />
         <ul className="top-menu">
           <NavLink
             to="/"
@@ -95,15 +85,9 @@ class App extends Component {
               External Map Control
             </Button>
           </NavLink>
-          <NavLink
-            onClick={this.toggleModal}
-            to="/projectinfo"
-          >
-            <Button variant="outlined" color="primary" aria-label="Edit">
-              {/* <Icon>forward</Icon> */}
-              Project Details
-            </Button>
-          </NavLink>
+          <Button variant="outlined" color="primary" aria-label="Edit" onClick={this.toggleModal}>
+            Project Details
+          </Button>
         </ul>
         <div id="map-info" className="map-info">
           <Table
