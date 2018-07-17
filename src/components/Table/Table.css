@@ -1,0 +1,25 @@
+.table-markers {
+    position: relative;
+    color: #676767;
+    width: 50%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    cursor: pointer;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(198, 217, 236, 0.51);
+}

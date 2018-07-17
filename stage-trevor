@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+VERSION="trevorgevers"
+echo $VERSION
+gcloud app deploy --project=gma-react --version $VERSION

@@ -1,0 +1,25 @@
+#map {
+    transition: 0.5s;
+}
+
+.map-border {
+    position: absolute;
+    width: 505px;
+    padding: 20px;
+    border: solid 1px rgb(218, 218, 218);
+    display: flex;
+    flex-direction: row;
+}
+
+.map-container {
+    position: relative; 
+    width: 541px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 41%;
+    transition: 0.5s;
+}
+
+.info {
+    display: inline-block;
+}
