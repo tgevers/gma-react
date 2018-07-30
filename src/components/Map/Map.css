@@ -3,7 +3,6 @@
 }
 
 .map-border {
-    position: absolute;
     width: 505px;
     padding: 20px;
     border: solid 1px rgb(218, 218, 218);
@@ -12,11 +11,10 @@
 }
 
 .map-container {
-    position: relative; 
     width: 541px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
-    top: 41%;
     transition: 0.5s;
 }
 

@@ -68,10 +68,10 @@ export default class Map extends Component {
         let mapVisible = this.state.show
         if (mapVisible) {
             this.setState({ show: !mapVisible })
-            document.getElementById('mc').style.top = '41%'
+            document.getElementById('mc').style.display = ''
         } else {
             this.setState({ show: !mapVisible })
-            document.getElementById('mc').style.top = '-200vh'
+            document.getElementById('mc').style.display = 'none'
         }
     }
     showInfo = () => {

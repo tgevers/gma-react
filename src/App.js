@@ -106,16 +106,16 @@ class App extends Component {
             load={this.state.loadMap}
             points={alpoints["points"]}
           />
-        </div>
-        <div className="button-bar">
-          <Button variant="contained" color="primary" onClick={this.loadMap}>Load Map</Button>
-          <Button variant="contained" color="primary" onClick={this.toggleZoom} disabled={!this.state.loadMap}>Toggle Zoom</Button>
-          <Button variant="contained" color="primary" onClick={this.toggleMap} disabled={!this.state.loadMap}>Toggle Map</Button>
-          <Button variant="contained" color="primary" onClick={this.setMarkersAL} disabled={!this.state.loadMap}>Add Markers for 35950</Button>
-          <Button variant="contained" color="primary" onClick={() => this.googleMap.current.hideMarkers()} disabled={!this.state.loadMap}>Hide markers</Button>
-          <Button variant="contained" color="primary" onClick={() => this.googleMap.current.showMarkers()} disabled={!this.state.loadMap}>Show Markers</Button>
-          <Button variant="contained" color="primary" onClick={() => this.googleMap.current.clearMarkers()} disabled={!this.state.loadMap}>Clear Markers</Button>
-          <Button variant="contained" color="primary" onClick={() => this.googleMap.current.resetMap()} disabled={!this.state.loadMap}>Reset Map</Button>
+          <div className="button-bar">
+            <Button variant="contained" color="primary" onClick={this.loadMap}>Load Map</Button>
+            <Button variant="contained" color="primary" onClick={this.toggleZoom} disabled={!this.state.loadMap}>Toggle Zoom</Button>
+            <Button variant="contained" color="primary" onClick={this.toggleMap} disabled={!this.state.loadMap}>Toggle Map</Button>
+            <Button variant="contained" color="primary" onClick={this.setMarkersAL} disabled={!this.state.loadMap}>Add Markers for 35950</Button>
+            <Button variant="contained" color="primary" onClick={() => this.googleMap.current.hideMarkers()} disabled={!this.state.loadMap}>Hide markers</Button>
+            <Button variant="contained" color="primary" onClick={() => this.googleMap.current.showMarkers()} disabled={!this.state.loadMap}>Show Markers</Button>
+            <Button variant="contained" color="primary" onClick={() => this.googleMap.current.clearMarkers()} disabled={!this.state.loadMap}>Clear Markers</Button>
+            <Button variant="contained" color="primary" onClick={() => this.googleMap.current.resetMap()} disabled={!this.state.loadMap}>Reset Map</Button>
+          </div>
         </div>
         <Switch>
           <Route exact path="/google-map" render={() => otherControl(this.googleMap, this.state.showMap)} />
